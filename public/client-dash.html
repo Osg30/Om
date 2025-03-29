@@ -38,24 +38,24 @@
      -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Client</a>
+          <a class="navbar-brand" >Client</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="" onclick="doLogout()" type="button">Home</a>
-              </li>
+              </li> -->
               
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Welcome : </a>
+                <a class="nav-link disabled" aria-disabled="true" style="color: black;">Welcome : </a>
               </li>
               <li class="nav-item" >
-                <a class="nav-link disabled" href="" aria-disabled="true" id="User"></a>
+                <a class="nav-link disabled" href="" aria-disabled="true" id="User" style="color: black;"></a>
               </li>
-              <li class="nav-item dropdown">
+              <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
@@ -65,7 +65,7 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-              </li>
+              </li> -->
               <!-- <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
               </li> -->
@@ -106,154 +106,60 @@
         </div>
       </nav>
 
-    <!-- <div class="d-flex justify-content-evenly .justify-content-sm-evenly">
-      <div>
-        Justify
-      </div>
-      <div>
-        Content
-      </div>
-      <div>
-        Evenly
-      </div>
-      <div>
-        to
-      </div>
-      <div>
-        more
-      </div>
-    </div>
-    <div class="d-flex justify-content-evenly .justify-content-sm-evenly">Content</div> -->
 
-   
-<!-- <br> -->
 
-<!-- <div class="row">
-<div class="col-md-12 bg-success text-white fw-bolder fs-4">
-  <center>
-    Our Products
-  </center>
-</div>
-</div> -->
 
-<!-- <div class="container" > -->
-<div class=" d-flex justify-content-evenly">
-  <div class="">
-    <div class="card" style="width: 18rem; ">
-      <img src="back/fort 1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Profile</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="/client" class="btn btn-primary">View More</a>
+<div class="container py-5">
+  <div class="row justify-content-center">    
+      <div class="col">
+        <div class="card h-100">
+          <img src="back/fort 1.jpg" class="card-img-top" height="200" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Profile</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <a href="/client" class="btn btn-primary">View More</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="">
-    <div class="card" style="width: 18rem; ">
-      <img src="back/fort 1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Publish-Job</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="/publish-job" class="btn btn-primary">View More</a>
+      <div class="col">
+        <div class="card h-100">
+          <img src="back/fort 2.jpg" class="card-img-top" height="200" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Publish-Job</h5>
+            <p class="card-text">This is a short card.</p>
+            <a href="/publish-job" class="btn btn-primary" style="margin-top: 95px; ">View More</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="">
-    <div class="card" style="width: 18rem; ">
-      <img src="back/fort 1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Job-Manager</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <!-- <a href="https://www.realjavaonline.com/" class="btn btn-primary">View More</a> -->
-        <button type="button" class="btn btn-primary position-relative">
-          <a href="/job-manager" class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-0-hover">View More</a>
-          <!-- <a href="#" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Emphasis link</a>
-          <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="/publish-job">
-            Underline opacity 0
-          </a> -->
-          <!-- <a href="/publish-job" style="color: white;" class="btn-primary stretched-link">View More</a> -->
-          <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-            <span class="visually-hidden">New alerts</span>
-          </span>
-        </button>
+      <div class="col">
+        <div class="card h-100">
+          <img src="back/fort 3.jpg" height="200" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Job-Manager</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            <!-- <a href="/job-manager" class="btn btn-primary" style="margin-top: 20px;">View More</a> -->
+            <button type="button" class="btn btn-primary position-relative" style="margin-top: 25px; ">
+              <a href="/job-manager" class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-0-hover">View More</a>
+              <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="">
-    <div class="card" style="width: 18rem; ">
-      <img src="back/fort 1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="https://www.realjavaonline.com/" class="btn btn-primary">View More</a>
+      <div class="col">
+        <div class="card h-100">
+          <img src="back/fort 4.jpg" height="200" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Edit Profile</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <a href="/client" class="btn btn-primary">View More</a>
+          </div>
+        </div>
       </div>
-    </div>
   </div>
 </div>
-<!-- </div> -->
 
-<!-- <br> -->
-
-<!-- <div class="row">
-<div class="col-md-12 bg-info text-white fw-bolder fs-4">
-  <center>
-    Our Team
-  </center>
-</div>
-</div> -->
-
-<!-- <div class="container">
-<div class="row mt-8 offset-md">
-<div class="col-md-3">
-  <div class="card" style="width: 18rem; ">
-    <img src="Pixel/adds1.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Profile</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="https://www.realjavaonline.com/" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>          
-</div>
-
-<div class="col-md-3 offset-md-1">
-    <div class="card" style="width: 18rem; ">
-      <img src="Pixel/adds1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Post Job</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="https://www.realjavaonline.com/" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>          
-  </div>
-
-<div class="col-md-1 offset-md-1">
-  <div class="card" style="width: 18rem; ">
-    <img src="Pixel/adds1.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Job Manager</h5>
-      <p class="card-text">This section includes the help for physically disabled. For more details visit</p>
-      <a href="https://www.realjavaonline.com/" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>          
-</div>
-
-<div class="col-md-3 offset-md-1">
-    <div class="card" style="width: 18rem; ">
-      <img src="Pixel/adds1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Job Manager</h5>
-        <p class="card-text">This section includes the help for physically disabled. For more details visit</p>
-        <a href="https://www.realjavaonline.com/" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>          
-  </div>
-
-  
-</div>
-</div>  -->
 
     
 

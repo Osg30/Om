@@ -16,6 +16,13 @@
         let activeUser=localStorage.getItem("activeUser");
         document.getElementById("User").value=activeUser;
       };
+
+      function doLogout()
+      {
+        localStorage.removeItem("activeUser");
+        alert(localStorage.getItem("activeUser"))
+        window.location.href="/";
+      }
     </script>
 
   </head>
@@ -68,7 +75,8 @@
                   <a class="nav-link" href="#">Link</a>
                 </li> -->
                 <li class="nav-item">
-                  <a class="nav-link" href="/">Logout</a>
+                  <input value="Logout" class="nav-link" onclick="doLogout()" type="button">
+                  <!-- <a class="nav-link" href="/">Logout</a> -->
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link disabled" aria-disabled="true">Disabled</a>
