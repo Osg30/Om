@@ -61,6 +61,17 @@
                 })
             })
         })
+
+        function doShowPrev(fileUpload,prev)
+        {
+            prev.src = window.URL.createObjectURL(fileUpload.files[0])
+        }
+
+        function doShowidPrev(idUpload,idprev)
+        {
+            idprev.src = window.URL.createObjectURL(idUpload.files[0])
+        }
+
      </script>
 
     <!-- <style>
@@ -71,250 +82,180 @@
     </style> -->
   </head>
   <body>
-
+    
+    <br>
 
     
-            <!-- Modal -->
-            <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                      </div>
-                      <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                      </div>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Understood</button>
-                  </div>
+    <div class="container-sm">
+      
+      <div class="row-mt-3 offset-md-3">
+        <div class="col col-md-8 ">
+
+          <div class="card " >
+            
+            <div class="card-body">
+              <!-- <div class="mb-3 position-relative">
+                <center>
+                  <img src="back/vol-pic.jpg" class="card-img-top" style="height: 150px; width: 120px;" id="prev" alt="...">
+                </center>
+                <input type="file" name="ppic" id="fileUpload" onchange="doShowPrev(fileUpload,prev);" class="form-control" aria-label="file example" required>
+                <div class="invalid-feedback">Example invalid form file feedback</div>
               </div>
-              </div>
-          </div> -->
-          <!-- </a> -->
-          <!-- </li>
-
-
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-     -->
-    <!-- <br> -->
-
-    <!-- <div class="row">
-      <div class="col-md-12 bg-success text-white fw-bolder fs-4">
-        <center>
-          Our Products
-        </center>
-      </div>
-    </div> -->
-
-    <!-- <div class="container" > -->
-      <!-- <div class="row mt-3">
-        <div class="col-md-3">
-          <div class="card" style="width: 18rem; ">
-            <img src="Pixel/adds1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="https://www.realjavaonline.com/" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
-        </div>
 
-        <div class="col-md-3">
-          <div class="card" style="width: 18rem; ">
-            <img src="Pixel/adds1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="https://www.realjavaonline.com/" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="card" style="width: 18rem; ">
-            <img src="Pixel/adds1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="https://www.realjavaonline.com/" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="card" style="width: 18rem; ">
-            <img src="Pixel/adds1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="https://www.realjavaonline.com/" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>-->
-    <!-- </div> -->
-
-    <!-- <br> 
-
-    <div class="row">
-      <div class="col-md-12 bg-info text-white fw-bolder fs-4">
-        <center>
-          Our Team
-        </center>
-      </div>
-    </div> -->
-
-    <div class="container row">
-    <div class="row mt-3 offset-md-2">
-      <form action="/vol-prosave" class="row" method="post" enctype="multipart/form-data">
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem; ">
-          <!-- <img src="Pixel/adds1.jpg" class="card-img-top" alt="..."> -->
           
-          <div class="card-body">
+          <div class="card position-relative" >
             <center>
-            <h5 class="card-title">Vol - KYC</h5>
+            
           </center>
-            <div>
-              <center>
-              <img style="height: 150px; width: 120px;" src="" alt="">
-              <br>
-              <br>
-              <input type="file" name="ppic" >
-            </center>              
+            <div class="card-body position-relative">
+              <div class="mb-3 position-relative">
+                <img src="back/vol-id.jpg" class="card-img-top" style="height: 150px; width: 120px;" id="idprev" alt="...">
+                <input type="file" name="idpic" id="idUpload" onchange="doShowidPrev(idUpload,idprev);" class="form-control" aria-label="file example" required>
+                <div class="invalid-feedback">Example invalid form file feedback</div>
+              </div>
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
-
-            <br>
-            <br>
-
-
-            <div>
-              <center>
-              <img style="height: 150px; width: 120px;" src="" alt="">
-              <br>
-              <br>
-              <input type="file" name="idpic">
-            </center>              
-            </div>
-            <br>
-
-            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="https://www.realjavaonline.com/" class="btn btn-primary">Go somewhere</a> -->
           </div>
-        </div>          
-      </div>
+          <div class="card"  >
+            <div class="card-body "> -->
 
-      <div class="col-md-3 offset-md-1 ">
-        <div class="card" style="width: 28rem; ">
-          <!-- <img src="Pixel/adds1.jpg" class="card-img-top" alt="..."> -->
-          <div class="card-body">
-
-            <center>
-              <h5 class="card-title">Vol - KYC</h5>
-            </center>
+              <h5 class="card-title">Client Profile</h5>
+    
             
-            <p class="card-text">Email ID</p>
-            <div style="float: left; width: 13rem;">
-              <input type="email" name="txtemail" id="txtemail">
-            </div>
-            
-            <input type="button" value="Fetch Details" formaction="/do-fetch-one">
-            <!-- <a href="https://www.realjavaonline.com/" class="btn btn-primary">Go somewhere</a> -->
-            <div style="padding-top: 10px;">
-             <div style="float: left; width: 13rem;" class="">
-              <p>Name</p>
-              <input type="text" name="txtname">
-             </div>
-             <div >
-              <p>Contact No</p>
-              <input type="text" name="txtcontact">
-             </div>
-            </div>
-
-            <div style="padding-top: 10px;">
-              <p>Address</p>
-             <input style="width: 25rem;" type="text" name="txtaddress">
-             </div>
-             
-             <div style="padding-top: 10px;">
-             <div style="float: left; width: 13rem;" class="">
-              <p>City</p>
-              <input type="text" name="txtcity">
-             </div>
-             <div >
-              <p>Gender</p>
-              <select style="width: 11rem;" id="disabledSelect" name="txtgender" class="form-select">
-                <option>Male</option>
-                <option>Female</option>
-              </select>
-             </div>
-             </div>
-
-             <div style="padding-top: 10px;">
-             <div style="float: left; width: 13rem;" class="">
-              <p>D.O.B</p>
-              <input type="date" name="txtdob">
-             </div>
-             <div >
-              <p>Qualification</p>
-              <select style="width: 11rem;" id="disabledSelect" name="txtquali" class="form-select">
-                <option>Yes</option>
-                <option>No</option>
-              </select>
-             </div>
-            </div>
-             
-            <div style="padding-top: 10px;">
-             <div style="float: left; width: 13rem;" class="">
-              <p>Occupation</p>
-              <select style="width: 11rem;" id="disabledSelect" name="txtoccu" class="form-select">
-                <option>Client</option>
-                <option>Volunter</option>
-              </select>
-             </div>
-             <div >
-              <p>Other Info</p>
-              <textarea cols="23" name="txtother" id=""></textarea>
-             </div>
-            </div>
-
-            <div style="padding-top: 10px;">
-              <center>
-                <input type="submit" value="Register" onclick="location.href='/vol-dash'">
-                <input type="button" value="Update" formaction="/do-update">
-              </center>
-             </div>
-
+       <form class="row g-3 needs-validation" novalidate>
+        
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip01" class="form-label">Volunteer Id</label>
+          <input type="email" class="form-control" name="txtemail" id="txtemail" value="volunteer@gmail.com" required>
+          <div class="valid-tooltip">
+            Looks good!
           </div>
-        </div>          
-      </div>
-    </form>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip02" class="form-label">Name</label>
+          <input type="text" class="form-control" name="txtname" value="volunteer" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltipUsername" class="form-label">Choose Your Pic</label>
+           <center>
+            <img src="back/vol-pic.jpg" class="card-img-top" style="height: 150px; width: 120px;" id="prev" alt="...">
+          </center>          
+          <div class="input-group has-validation">
+            <input type="file" name="ppic" id="fileUpload" onchange="doShowPrev(fileUpload,prev);" class="form-control" aria-label="file example" required>
+            <div class="invalid-tooltip">
+              Please choose a unique and valid username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltipUsername" class="form-label">Choose ID Proof Pic</label>
+           <center>
+          <img src="back/vol-id.jpg" class="card-img-top" style="height: 150px; width: 120px;" id="idprev" alt="...">
+        </center>
+          <div class="input-group has-validation">
+            <input type="file" name="idpic" id="idUpload" onchange="doShowidPrev(idUpload,idprev);" class="form-control" aria-label="file example" required>
+            <div class="invalid-tooltip">
+              Please choose a unique and valid username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltipUsername" class="form-label">Contact No</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="validationTooltipUsernamePrepend">+91</span>
+            <input type="text" class="form-control" name="txtcontact" aria-describedby="validationTooltipUsernamePrepend" required>
+            <div class="invalid-tooltip">
+              Please choose a unique and valid contact no.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip03" class="form-label">City</label>
+          <input type="text" class="form-control" name="txtcity" required>
+          <div class="invalid-tooltip">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-12 position-relative">
+          <label for="validationTooltip03" class="form-label">Address</label>
+          <input type="text" class="form-control" name="txtaddress" required>
+          <div class="invalid-tooltip">
+            Please provide a valid address.
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip04" class="form-label">Gender</label>
+          <select class="form-select" name="txtgender" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+          <div class="invalid-tooltip">
+            Please select a valid gender.
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip03" class="form-label">D.O.B.</label>
+          <input type="date" class="form-control" name="txtdob" required>
+          <div class="invalid-tooltip">
+            Please provide a valid date of birth.
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip04" class="form-label">Qualification</label>
+          <select class="form-select" name="txtquali" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-tooltip">
+            Please select a valid Qualification.
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip04" class="form-label">Occupation</label>
+          <select class="form-select" name="txtoccu" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-tooltip">
+            Please select a valid Occupation.
+          </div>
+        </div>
+        <div class="mb-3 position-relative">
+          <label for="validationTextarea" class="form-label">Other Info</label>
+          <textarea class="form-control" name="txtother" placeholder="Other" required></textarea>
+          <div class="invalid-feedback">
+            Please enter a message in the Other Info.
+          </div>
+        </div>
+        <div class="col-12">
+          <center>
+            <!-- <input class="btn btn-primary" type="button" name="" id="Save" value="Submit"> -->
+            <input class="btn btn-primary" type="submit" value="Register" onclick="location.href='/vol-dash'">
+            <input class="btn btn-primary" type="button" value="Update" formaction="/do-update">
+            <input class="btn btn-primary" type="button" value="Fetch Details" formaction="/do-fetch-one">
+           </center>
+    
+          <!-- <button class="btn btn-primary" type="submit">Submit form</button> -->
+        </div>
+      </form>
+    
     </div>
-    </div> 
+    </div>
+    </div>
+   
+    <br>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
