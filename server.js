@@ -97,6 +97,12 @@ app.get("/publish-job",function(req,resp){
     resp.sendFile(fullpath);
 });
 
+app.get("/job-available",function(req,resp){
+    console.log(req.query);
+    let fullpath=path+"/job-available.html";
+    resp.sendFile(fullpath);
+});
+
 app.get("/job-manager",function(req,resp){
     console.log(req.query);
     let fullpath=path+"/job-manager.html";
@@ -270,6 +276,59 @@ app.post("/vol-prosave",async function(req,resp)
 
 
 
+app.get("/all-records",function(req,resp)
+{
+    mySqlServer.query("select * from jobs",function(err,result)
+    {
+        console.log(result);
+        resp.send(result);
+    })
+})
+
+app.get("/current-records",function(req,resp)
+{
+    let userMail=req.query.active;
+    console.log(userMail);
+    mySqlServer.query("select * from jobs where cid=",[userMail],function(err,result)
+    {
+        console.log(result);
+        resp.send(result);
+    })
+})
+
+app.get("/do-delete-one",function(req,resp)
+{
+    let userMail=req.query.emailKuch;
+                                                  //col name Same as  table col name
+    mySqlServer.query("delete from jobs where jobid=?",[userMail],function(err,result)
+    {
+        if(err==null)
+        {
+            if(result.affectedRows==1)
+            resp.send("Record Deleted Successfulllyyyy");
+            else
+            resp.send("Inavlid User Id");
+        }
+        else
+        resp.send(err.message);
+    })
+})
+
+app.get("/do-fetch-1",function(req,resp)
+{
+    console.log(req.query)
+    if(req.query.emailKuch=="All")
+        query="select * from jobs";
+    else
+        query="select * from jobs where cid=?";
+    mySqlServer.query(query,[req.query.emailKuch],function(err,result)
+    {
+        console.log(result);
+        resp.send(result);
+    })
+})
+
+
 
 
 // app.post("/do-update",async function(req,resp)
@@ -318,7 +377,7 @@ app.post("/vol-prosave",async function(req,resp)
 
 
 
-// app.get("/all-records",function(req,resp)
+// app.get("/job-records",function(req,resp)
 // {
 //     mySqlServer.query("select * from jobs",function(err,result)
 //     {
@@ -330,7 +389,7 @@ app.post("/vol-prosave",async function(req,resp)
 // app.get("/do-delete-one",function(req,resp)
 // {
 //     let userMail=req.query.emailKuch;
-//                                                   //col name Same as  table col name
+//     //col name Same as  table col name
 //     mySqlServer.query("delete from jobs where cid=?",[userMail],function(err,result)
 //     {
 //         if(err==null)

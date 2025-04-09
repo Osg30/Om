@@ -12,25 +12,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        
-        
-        function init()
-      {
-        let activeUser=localStorage.getItem("activeUser");
-        alert(activeUser)
-        document.getElementById("User").innerHTML=activeUser;
-        // document.getElementById("User").value=activeUser;
-      }
-
         let mymodule= angular.module("myModuleKuch",[]);
         let myController=mymodule.controller("myControllerKuch",function($scope,$http)
         {
          $scope.jsonAry=[];
          $scope.doFetchAll=function()
          {
-            let activeUser=localStorage.getItem("activeUser");
-            //  let url="/current-records";
-             let url="//current-records?active="+activeUser
+             let url="/all-records";
              $http.get(url).then(fxSuccess,fxFail);
  
              function fxSuccess(response)
@@ -101,7 +89,7 @@
 
 
 </head>
-<body onload="init()" ng-app="myModuleKuch" ng-controller="myControllerKuch" ng-init="doFetchAll();">
+<body ng-app="myModuleKuch" ng-controller="myControllerKuch" ng-init="doFetchAll();">
 
 
     <center>
